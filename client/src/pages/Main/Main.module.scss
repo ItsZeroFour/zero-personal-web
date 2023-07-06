@@ -1,0 +1,45 @@
+.main {
+  margin-bottom: 6rem;
+}
+
+.main__heading {
+  font-family: "Sora-bold", sans-serif;
+  font-size: 3.5rem;
+  margin-top: 5rem;
+  background: linear-gradient(to left, #3bf686 0%, #4ca9ff 50%, #3bf686 100%);
+
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: animationGradient 10s linear infinite;
+  -webkit-animation: animationGradient 10s linear infinite;
+
+  @-webkit-keyframes animationGradient {
+    0% {
+      background-position: -100% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes animationGradient {
+    0% {
+      background-position: -100% 0%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @media (max-width: 929px) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 2rem;
+  }
+}

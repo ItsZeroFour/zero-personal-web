@@ -1,0 +1,91 @@
+.projects {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 1130px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.projects__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+
+  @media (max-width: 1130px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.projects__input {
+  margin-top: 1rem;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    bottom: 0;
+    right: 0;
+    margin: auto 1rem;
+    width: 28px;
+    height: 28px;
+    background: url("../../../images/portfolio/search-icon.svg") no-repeat;
+    background-size: cover;
+    z-index: 1;
+
+    @media (max-width: 518px) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1130px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 683px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 518px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 365px) {
+    width: 15rem;
+  }
+
+  @media (max-width: 272px) {
+    width: 13rem;
+  }
+}
+
+.projects__search__input {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  letter-spacing: 1px;
+  border-radius: var(--border-radius-sm);
+  color: var(--color-gray);
+  background-color: #3f4152;
+}
+
+.projects__link {
+  margin-top: 2rem;
+
+  a {
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    color: var(--color-white);
+    background: var(--color-cyan);
+  }
+}

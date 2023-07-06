@@ -1,0 +1,164 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background: var(--color-dark);
+  color: var(--color-white);
+  font-family: "Poppins", sans-serif;
+}
+
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sora-bold", "Poppins", sans-serif;
+}
+
+.page {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+.text-orange {
+  color: var(--color-orange);
+}
+
+.text-blue {
+  color: var(--color-blue);
+}
+
+.text-yellow {
+  color: var(--color-yellow);
+}
+
+.text-light-blue {
+  color: var(--color-light-blue);
+}
+
+.text-cyan {
+  color: var(--color-cyan);
+}
+
+.text-green {
+  color: var(--color-green);
+}
+
+// Burger menu
+
+.burgerMenu {
+  display: none;
+
+  position: fixed;
+  background: var(--color-dark);
+  width: 100vw;
+  padding: 0.5rem;
+  z-index: 999;
+
+  @media (max-width: 860px) {
+    display: block;
+  }
+}
+
+.burgerMenu__menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: 3px solid var(--color-white);
+}
+
+.burgerMenu__menu__burger {
+  width: 22px;
+  height: 3px;
+  background-color: var(--color-white);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 3px;
+    background: var(--color-white);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  }
+
+  &::before {
+    transform: translateY(-8px);
+  }
+
+  &::after {
+    transform: translateY(8px);
+  }
+}
+
+.burgerMenu__menu.open .burgerMenu__menu__burger {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+
+  &::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+}
+
+.burgerMenu__list {
+  height: 100vh;
+  margin-top: 1rem;
+  border-top: 1px solid var(--color-gray);
+
+  li {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+
+    a {
+      color: var(--color-white);
+    }
+  }
+}
+
+.burgerMenu__openMenu {
+  margin-top: 1rem;
+}

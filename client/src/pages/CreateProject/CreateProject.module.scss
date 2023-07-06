@@ -1,0 +1,79 @@
+.createProject {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  form {
+    margin-top: 1rem;
+  }
+}
+
+.createProject__text__input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  input {
+    padding: 1rem;
+    letter-spacing: 1px;
+    background: var(--color-dark-blue);
+    border-radius: var(--border-radius-sm);
+    color: var(--color-gray);
+  }
+}
+
+.createProject__stacks {
+  margin-top: 1rem;
+
+  label {
+    padding: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    border: 1px dashed var(--color-blue);
+  }
+
+  input {
+    padding: 0.7rem;
+    margin-left: 1rem;
+    border-radius: var(--border-radius-sm);
+    background: var(--color-dark-blue);
+    color: var(--color-gray);
+  }
+
+  button {
+    padding: 0.7rem;
+    margin-left: 1rem;
+    background-color: var(--color-light-blue);
+    color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+.createProject__submit__button {
+  margin-top: 2rem;
+  padding: 0.8rem 2rem;
+  background-color: var(--color-light-blue);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+}
+
+.createProject__stack__create {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+
+  img {
+    width: 40px;
+    height: 40px;
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
+  p {
+    margin-left: 1rem;
+  }
+
+  svg {
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--color-red);
+  }
+}

@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-dark-gray);
+  margin-bottom: 1rem;
+
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+
+.header__list {
+  display: flex;
+
+  a {
+    color: var(--color-gray);
+    transition: var(--transition);
+
+    &:hover {
+      color: var(--color-white);
+      border-bottom: 2px solid var(--color-white);
+    }
+  }
+
+  li + li {
+    margin-left: 4.5rem;
+  }
+}

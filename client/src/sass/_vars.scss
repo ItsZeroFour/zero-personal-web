@@ -1,0 +1,40 @@
+:root {
+  --color-white: #fff;
+  --color-dark: #272727;
+  --color-dark-second: #2b2b2b;
+  --color-gray: #d1d1d1;
+  --color-dark-gray: #4d4d4d;
+  --color-light-gray: #fbfbfb;
+  --color-light-blue: #4e75ef;
+  --color-orange: #ff6433;
+  --color-red: #ec3131;
+  --color-blue: #0047ff;
+  --color-yellow: #cadc00;
+  --color-cyan: #00a3ff;
+  --color-dark-blue: #323443;
+  --color-green: #00ff47;
+
+  --transition: 0.1s ease-in;
+
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 1.5rem;
+
+  --border-color-gradient: linear-gradient(
+      var(--color-dark-gray),
+      var(--color-dark-gray)
+    ),
+    radial-gradient(circle at top left, #62d9ff, #3bf686);
+
+  --border-color-gradient-biography: linear-gradient(
+      var(--color-dark),
+      var(--color-dark)
+    ),
+    radial-gradient(circle at top left, #62d9ff, #3bf686);
+
+  --border-color-gradient-stack: linear-gradient(
+      var(--color-dark-blue),
+      var(--color-dark-blue)
+    ),
+    radial-gradient(circle at top left, #62d9ff, #3bf686);
+}

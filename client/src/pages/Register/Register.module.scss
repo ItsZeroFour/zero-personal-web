@@ -1,0 +1,130 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  h2 {
+    width: 15%;
+    border-bottom: 2px solid var(--color-white);
+    padding-bottom: 0.5rem;
+  }
+}
+
+.register__form {
+  width: 35%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  input {
+    background: none;
+    color: var(--color-white);
+    border-radius: var(--border-radius-sm);
+    border: 1px solid var(--color-dark-gray);
+
+    padding: 0.7rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+
+    color: var(--color-white);
+    background: var(--color-light-blue);
+    border-radius: var(--border-radius-sm);
+    transition: var(--transition);
+
+    &:hover {
+      box-shadow: 0px 0px 5px var(--color-light-blue);
+    }
+  }
+
+  .register__avatar__mobile {
+    display: none;
+
+    text-align: center;
+    margin-top: 1rem;
+
+    img {
+      width: 120px;
+      height: 120px;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      display: inline-flex;
+      border: double 4px transparent;
+      border-radius: 50%;
+      background-image: var(--border-color-gradient);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+
+      cursor: pointer;
+    }
+
+    @media (max-width: 860px) {
+      display: block;
+    }
+  }
+
+  @media (max-width: 700px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 341px) {
+    width: 15rem;
+  }
+
+  @media (max-width: 284px) {
+    width: 12rem;
+  }
+}
+
+.register__form__content {
+  margin-top: 3rem;
+}
+
+.register__avatar {
+  margin-left: 5rem;
+
+  img {
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+    object-fit: cover;
+
+    display: inline-flex;
+    border: double 4px transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        var(--color-dark-gray),
+        var(--color-dark-gray)
+      ),
+      radial-gradient(circle at top left, #62d9ff, #3bf686);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    cursor: pointer;
+  }
+
+  @media (max-width: 860px) {
+    display: none;
+  }
+}
+
+.register__have__account {
+  margin-top: 1rem;
+  
+  a {
+    color: var(--color-light-blue);
+    text-decoration: underline;
+  }
+}

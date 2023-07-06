@@ -1,0 +1,8 @@
+.portfolio {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 861px) {
+    margin-top: 5rem;
+  }
+}

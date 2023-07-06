@@ -1,0 +1,132 @@
+.projects__item {
+  display: flex;
+  flex-direction: column;
+
+  width: 48.5%;
+  height: 282px;
+
+  padding: 2rem;
+
+  background: var(--color-dark-blue);
+  border-radius: var(--border-radius-sm);
+
+  color: var(--color-white);
+
+  p {
+    margin-top: 1rem;
+    color: var(--color-gray);
+  }
+
+  @media (max-width: 1130px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 683px) {
+    width: 30rem;
+  }
+
+  @media (max-width: 518px) {
+    width: 20rem;
+  }
+
+  @media (max-width: 365px) {
+    width: 15rem;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 272px) {
+    width: 13rem;
+    height: auto;
+  }
+}
+
+.projects__item__text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projects__item__text__text {
+  width: 80%;
+
+  @media (max-width: 365px) {
+    width: 100%;
+    h3 {
+      font-size: 1rem;
+      width: 75%;
+    }
+  }
+}
+
+.projects__item__bottom {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .projects__stacks {
+    display: flex;
+    gap: 1rem;
+
+    li {
+      img {
+        width: 40px;
+        height: 40px;
+        padding: 0.2rem;
+        -o-object-fit: contain;
+        object-fit: contain;
+
+        background-color: var(--color-white);
+        border-radius: var(--border-radius-sm);
+
+        @media (max-width: 272px) {
+          width: 35px;
+          height: 35px;
+        }
+      }
+    }
+
+    @media (max-width: 272px) {
+      margin-top: 1rem;
+    }
+  }
+
+  @media (max-width: 365px) {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+}
+
+.projects__item__text {
+  display: flex;
+  color: var(--color-white);
+}
+
+.projects__item__buttons {
+  button {
+    font-size: 1.3rem;
+    background: none;
+    color: var(--color-red);
+  }
+
+  a {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: var(--color-light-blue);
+  }
+
+  .projects__item__stars {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-top: 0.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  @media (max-width: 518px) {
+    display: flex;
+    align-items: start;
+  }
+}

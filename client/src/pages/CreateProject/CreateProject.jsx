@@ -82,7 +82,7 @@ const CreateProject = () => {
       };
 
       isEditing
-        ? await axios.patch(`/projects/${id}`, fields)
+        ? await axios.patch(`/projects/:${id}`, fields)
         : await axios.post("/projects", fields);
 
       navigate("/portfolio");

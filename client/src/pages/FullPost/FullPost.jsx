@@ -80,7 +80,7 @@ const FullPost = () => {
   */
   useEffect(() => {
     axios
-      .get(`/posts/${id}`)
+      .get(`/posts/:${id}`)
       .then((res) => {
         setData(res.data);
         setIsLoading(false);

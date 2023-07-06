@@ -65,7 +65,7 @@ const CreatePost = () => {
       const id = data._id;
       console.log("Post created successfully");
 
-      navigate(`/posts/${id}`);
+      navigate(`/posts/:${id}`);
     } catch (err) {
       console.error(err);
       toast("Couldn't create post");

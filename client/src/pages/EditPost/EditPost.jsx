@@ -38,7 +38,7 @@ const EditPost = () => {
   useEffect(() => {
     if (id) {
       axios
-        .get(`/posts/${id}`)
+        .get(`/posts/:${id}`)
         .then(({ data }) => {
           setTitle(data.title);
           setText(data.text);
@@ -71,9 +71,9 @@ const EditPost = () => {
         tags,
       };
 
-      await axios.patch(`/posts/${id}`, fields);
+      await axios.patch(`/posts/:${id}`, fields);
 
-      navigate(`/posts/${id}`);
+      navigate(`/posts/:${id}`);
     } catch (err) {
       console.log(err);
       toast("Article editing error");

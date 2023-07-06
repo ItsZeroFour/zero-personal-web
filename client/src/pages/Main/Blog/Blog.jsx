@@ -41,7 +41,11 @@ const Blog = () => {
 
               <h2>{data.title}</h2>
 
-              <p>{data.text}</p>
+              <p>
+                {data.text.length > 200
+                  ? `${data.text.substring(0, 200)}...`
+                  : data.text}
+              </p>
             </div>
           </div>
         ))

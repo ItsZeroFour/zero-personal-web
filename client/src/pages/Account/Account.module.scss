@@ -68,4 +68,8 @@
     color: var(--color-blue);
     text-decoration: underline;
   }
+
+  @media (max-width: 860px) {
+    margin-top: 6rem;
+  }
 }

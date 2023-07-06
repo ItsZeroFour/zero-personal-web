@@ -46,7 +46,9 @@ const CreatePost = () => {
     Create post and send us to this post page
     If we have an error send notificate
   */
-  const onSubmit = async () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
     try {
       setIsLoading(true);
 
@@ -61,6 +63,7 @@ const CreatePost = () => {
       const { data } = await axios.post("/posts", fields);
 
       const id = data._id;
+      console.log("Post created successfully");
 
       navigate(`/posts/${id}`);
     } catch (err) {
@@ -75,7 +78,7 @@ const CreatePost = () => {
 
   return (
     <main className={style.createPost}>
-      <form onSubmit={(event) => event.preventDefault()}>
+      <form>
         {imageUrl === "" ? (
           <>
             <input

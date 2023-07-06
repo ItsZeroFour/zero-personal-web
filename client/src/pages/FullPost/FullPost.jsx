@@ -32,6 +32,7 @@ const FullPost = () => {
   const { comments } = useSelector((state) => state.comments);
   const data_ = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const isAuth = useSelector(selectIsAuth);
 
   let commentsLength = comments.length;
 
@@ -105,7 +106,11 @@ const FullPost = () => {
     <main className={style.fullPost}>
       {data.imageUrl && (
         <img
-          src={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ""}
+          src={
+            data.imageUrl
+              ? `${process.env.REACT_APP_API_URL}${data.imageUrl}`
+              : ""
+          }
           alt="post"
         />
       )}
@@ -130,7 +135,8 @@ const FullPost = () => {
         </div>
 
         <div className={style.fullPost__tags}>
-          {data_.length !== 0 &&
+          {isAuth &&
+            data_.length !== 0 &&
             data_.data.email === "itsZeroFourX@gmail.com" && (
               <div className={style.fullPost__buttons}>
                 <button
@@ -167,14 +173,14 @@ const FullPost = () => {
             <div className={style.fullPost__comments__create}>
               <img
                 src={
-                  data_.length !== 0 && data_.data.avatarUrl
+                  isAuth && data_.length !== 0 && data_.data.avatarUrl
                     ? `${process.env.REACT_APP_API_URL}${data_.data.avatarUrl}`
                     : baseAvatar
                 }
                 alt="user avatar"
               />
 
-              {data_.length !== 0 && (
+              {isAuth && data_.length !== 0 && (
                 <form onSubmit={(event) => event.preventDefault()}>
                   <h3>{data_.data.firstName + " " + data_.data.lastName}</h3>
                   <input

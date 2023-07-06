@@ -75,7 +75,7 @@ const CreatePost = () => {
 
   return (
     <main className={style.createPost}>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={(event) => event.preventDefault()}>
         {imageUrl === "" ? (
           <>
             <input
@@ -128,7 +128,7 @@ const CreatePost = () => {
           placeholder="Tags"
         />
 
-        <button type="submit" disabled={isLoading}>
+        <button type="submit" onClick={onSubmit} disabled={isLoading}>
           {isLoading ? "Статься создается..." : "Создать статью"}
         </button>
       </form>

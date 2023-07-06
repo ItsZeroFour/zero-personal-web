@@ -174,7 +174,7 @@ const CreateProject = () => {
 
         {stackImage !== "" && (
           <div className={style.createProject__stack__create}>
-            <img src={`http://localhost:4444${stackImage}`} alt={stackName} />
+            <img src={`${process.env.REACT_APP_API_URL}${stackImage}`} alt={stackName} />
             <p>{stackName}</p>
           </div>
         )}
@@ -182,7 +182,7 @@ const CreateProject = () => {
         {stacks.map((item, index) => (
           <div key={index} className={style.createProject__stack__create}>
             <img
-              src={`http://localhost:4444${item.stackImage}`}
+              src={`${process.env.REACT_APP_API_URL}${item.stackImage}`}
               alt={item.stackName}
             />
             <p>{item.stackName}</p>

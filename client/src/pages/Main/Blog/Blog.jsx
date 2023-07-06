@@ -30,7 +30,7 @@ const Blog = () => {
             <div className={style.blog__element__image}>
               {data.imageUrl && (
                 <img
-                  src={`http://localhost:4444${data.imageUrl}`}
+                  src={`${process.env.REACT_APP_API_URL}${data.imageUrl}`}
                   alt="blog img"
                 />
               )}

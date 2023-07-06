@@ -79,7 +79,9 @@ const Register = () => {
           <label htmlFor="reg-avatar">
             <img
               src={
-                avatarUrl !== "" ? `http://localhost:4444${avatarUrl}` : avatar
+                avatarUrl !== ""
+                  ? `${process.env.REACT_APP_API_URL}${avatarUrl}`
+                  : avatar
               }
               alt="Your avatar"
             />
@@ -144,7 +146,9 @@ const Register = () => {
         <label htmlFor="reg-avatar">
           <img
             src={
-              avatarUrl !== "" ? `http://localhost:4444${avatarUrl}` : avatar
+              avatarUrl !== ""
+                ? `${process.env.REACT_APP_API_URL}${avatarUrl}`
+                : avatar
             }
             alt="Your avatar"
           />

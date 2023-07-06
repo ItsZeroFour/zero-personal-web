@@ -24,7 +24,7 @@ const Post = ({
         <NavLink className={style.post} to={`/posts/:${id}`}>
           <div className={style.post__main}>
             {imageUrl && (
-              <img src={`http://localhost:4444${imageUrl}`} alt="post img" />
+              <img src={`${process.env.REACT_APP_API_URL}${imageUrl}`} alt="post img" />
             )}
 
             <div className={style.post__text}>

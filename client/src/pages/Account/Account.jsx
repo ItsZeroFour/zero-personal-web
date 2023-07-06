@@ -35,7 +35,7 @@ const Account = ({ isAuth }) => {
             <img
               src={
                 data.avatarUrl !== ""
-                  ? `http://localhost:4444${data.avatarUrl}`
+                  ? `${process.env.REACT_APP_API_URL}${data.avatarUrl}`
                   : logo
               }
               alt="avatar"

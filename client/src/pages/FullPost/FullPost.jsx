@@ -105,7 +105,7 @@ const FullPost = () => {
     <main className={style.fullPost}>
       {data.imageUrl && (
         <img
-          src={data.imageUrl ? `http://localhost:4444${data.imageUrl}` : ""}
+          src={data.imageUrl ? `${process.env.REACT_APP_API_URL}${data.imageUrl}` : ""}
           alt="post"
         />
       )}
@@ -168,7 +168,7 @@ const FullPost = () => {
               <img
                 src={
                   data_.length !== 0 && data_.data.avatarUrl
-                    ? `http://localhost:4444${data_.data.avatarUrl}`
+                    ? `${process.env.REACT_APP_API_URL}${data_.data.avatarUrl}`
                     : baseAvatar
                 }
                 alt="user avatar"
@@ -196,7 +196,7 @@ const FullPost = () => {
                   <img
                     src={
                       data.author?.avatarUrl
-                        ? `http://localhost:4444${data.author.avatarUrl}`
+                        ? `${process.env.REACT_APP_API_URL}${data.author.avatarUrl}`
                         : baseAvatar
                     }
                     alt="user avatar"

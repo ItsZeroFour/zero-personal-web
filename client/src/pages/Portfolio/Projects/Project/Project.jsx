@@ -101,7 +101,7 @@ const Project = ({
               {stacks.map((item) => (
                 <li key={item}>
                   <img
-                    src={`http://localhost:4444${item.stackImage}`}
+                    src={`${process.env.REACT_APP_API_URL}${item.stackImage}`}
                     alt={item.stackName}
                   />
                 </li>

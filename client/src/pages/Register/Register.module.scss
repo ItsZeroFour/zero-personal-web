@@ -11,6 +11,10 @@
     border-bottom: 2px solid var(--color-white);
     padding-bottom: 0.5rem;
   }
+
+  @media (max-width: 860px) {
+    margin-top: 6rem;
+  }
 }
 
 .register__form {
@@ -122,7 +126,7 @@
 
 .register__have__account {
   margin-top: 1rem;
-  
+
   a {
     color: var(--color-light-blue);
     text-decoration: underline;

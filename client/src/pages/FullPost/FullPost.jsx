@@ -97,8 +97,6 @@ const FullPost = () => {
     fetchComments();
   }, [fetchComments]);
 
-  // console.log(commentsLength);
-
   if (isLoading) {
     return <p>Loading...</p>;
   }
@@ -171,17 +169,17 @@ const FullPost = () => {
           <CommentSceleton />
         ) : (
           <>
-            <div className={style.fullPost__comments__create}>
-              <img
-                src={
-                  isAuth && data_.length !== 0 && data_.data.avatarUrl
-                    ? `${process.env.REACT_APP_API_URL}${data_.data.avatarUrl}`
-                    : baseAvatar
-                }
-                alt="user avatar"
-              />
+            {isAuth && data_.length !== 0 && (
+              <div className={style.fullPost__comments__create}>
+                <img
+                  src={
+                    isAuth && data_.length !== 0 && data_.data.avatarUrl
+                      ? `${process.env.REACT_APP_API_URL}${data_.data.avatarUrl}`
+                      : baseAvatar
+                  }
+                  alt="user avatar"
+                />
 
-              {isAuth && data_.length !== 0 && (
                 <form onSubmit={(event) => event.preventDefault()}>
                   <h3>{data_.data.firstName + " " + data_.data.lastName}</h3>
                   <input
@@ -194,8 +192,8 @@ const FullPost = () => {
                     Send
                   </button>
                 </form>
-              )}
-            </div>
+              </div>
+            )}
 
             <ul className={style.fullPost__comments__list}>
               {[...comments].reverse().map((data) => (

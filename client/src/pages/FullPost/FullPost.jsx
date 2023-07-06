@@ -19,6 +19,7 @@ import {
   fetchCreateComment,
   fetchGetPostComments,
 } from "../../redux/slices/comment";
+import { selectIsAuth } from "../../redux/slices/auth";
 
 const FullPost = () => {
   const [data, setData] = useState([]);

@@ -36,14 +36,14 @@ const Reviews = ({ isAuth }) => {
 
   return (
     <main className={style.reviews}>
-      {isAuth && data.email === "itsZeroFourX@gmail.com" && (
+      {isAuth && data?.email === "itsZeroFourX@gmail.com" && (
         <Link className={style.reviews__link} to="/reviews/create">
           Create review
         </Link>
       )}
 
       <section>
-        {data ? (
+        {reviews && reviews.data ? (
           <ul className={style.reviews__list}>
             {reviews.data.map((item) => (
               <li>

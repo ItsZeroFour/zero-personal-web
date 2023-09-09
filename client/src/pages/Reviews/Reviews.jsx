@@ -21,11 +21,9 @@ const Reviews = ({ isAuth }) => {
       });
   }, []);
 
-  const deleteReview = async (event) => {
-    event.preventDefault();
-
+  const deleteReview = async (id) => {
     try {
-      await axios.delete("/reviews/delete");
+      await axios.delete(`/reviews/delete/${id}`);
 
       toast("Successfully deleted review");
     } catch (err) {
@@ -60,7 +58,7 @@ const Reviews = ({ isAuth }) => {
                   </div>
 
                   {isAuth && data.email === "itsZeroFourX@gmail.com" && (
-                    <button onClick={deleteReview}>
+                    <button onClick={() => deleteReview(item._id)}>
                       <FontAwesomeIcon icon={faTrash} />
                     </button>
                   )}

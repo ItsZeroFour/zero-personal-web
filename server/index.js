@@ -98,7 +98,7 @@ app.post("/comment/::id", checkAuth, CommentController.createComment);
 // Reviews
 app.post("/reviews/create", ReviewsController.createReviews);
 app.get("/reviews/getAll", ReviewsController.getReviews);
-app.delete("/reviews/delete", ReviewsController.deleteReview)
+app.delete("/reviews/delete/:id", ReviewsController.deleteReview)
 
 // Start function
 async function start() {

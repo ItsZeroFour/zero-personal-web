@@ -12,6 +12,7 @@
 
 .header__list {
   display: flex;
+  gap: 3.5rem;
 
   a {
     color: var(--color-gray);
@@ -21,9 +22,5 @@
       color: var(--color-white);
       border-bottom: 2px solid var(--color-white);
     }
-  }
-
-  li + li {
-    margin-left: 4.5rem;
   }
 }

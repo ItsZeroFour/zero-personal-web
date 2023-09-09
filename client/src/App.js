@@ -19,6 +19,8 @@ import EditPost from "./pages/EditPost/EditPost";
 import CreateProject from "./pages/CreateProject/CreateProject";
 import Contacts from "./pages/Contacts/Contacts";
 import NotFound from "./pages/NotFound/NotFound";
+import Reviews from "./pages/Reviews/Reviews";
+import CreateReview from "./pages/Reviews/CreateReview/CreateReview";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,6 +46,8 @@ function App() {
             <Route path="/posts/:id" element={<FullPost />} />
             <Route path="/posts/:id/edit" element={<EditPost />} />
             <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/reviews" element={<Reviews isAuth={isAuth} />} />
+            <Route path="/reviews/create" element={<CreateReview isAuth={isAuth} />} />
             <Route path="/projects/create" element={<CreateProject />} />
             <Route path="/projects/create/:id" element={<CreateProject />} />
             <Route path="/contacts" element={<Contacts />} />

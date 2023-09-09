@@ -1,0 +1,130 @@
+.reviews {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.reviews__link {
+  padding: 1rem;
+
+  border-radius: var(--border-radius-sm);
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.create__review {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.create__review__image {
+  label {
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius-sm);
+    background: var(--color-blue);
+  }
+
+  img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: var(--border-radius-sm);
+    background: var(--color-red);
+    color: var(--color-white);
+  }
+}
+
+.create__review {
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.create__review__input__first {
+  margin-top: 3rem !important;
+}
+
+.create__review__input__textarea,
+.create__review__input__first {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  background: transparent;
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--color-dark-gray);
+  color: var(--color-white);
+
+  &::placeholder {
+    color: var(--color-white);
+  }
+}
+
+.create__review__input__textarea {
+  height: 250px;
+  resize: none;
+}
+
+.create__review__create {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+
+.reviews__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 3rem;
+
+  li {
+    padding: 1rem;
+    max-width: 600px;
+
+    background: var(--color-dark-second);
+    border-radius: var(--border-radius-sm);
+
+    img {
+      width: 100%;
+      // height: 200px;
+      object-fit: contain;
+    }
+
+    .reviews__stars {
+      display: flex;
+      justify-content: space-between;
+
+      margin-top: 1rem;
+
+      svg {
+        color: var(--color-yellow);
+      }
+
+      svg + svg {
+        margin-left: 0.2rem;
+      }
+
+      button {
+        background: none;
+
+        svg {
+          color: var(--color-red);
+        }
+      }
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+  }
+}

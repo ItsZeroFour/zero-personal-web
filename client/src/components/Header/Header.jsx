@@ -16,6 +16,7 @@ const Header = () => {
             { title: "Home", link: "/" },
             { title: "Blog", link: "/blog" },
             { title: "Portfolio", link: "/portfolio" },
+            { title: "Reviews", link: "/reviews" },
             { title: "Contacts", link: "/contacts" },
             { title: "Account", link: "/account" },
           ].map(({ title, link }) => (

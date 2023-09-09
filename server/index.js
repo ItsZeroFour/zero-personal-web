@@ -13,6 +13,7 @@ import {
   PostController,
   ProjectController_,
   CommentController,
+  ReviewsController,
 } from "./controllers/index.js";
 import { handleValidationErrors, checkAuth } from "./utils/index.js";
 
@@ -93,6 +94,11 @@ app.put(
 
 // Comments
 app.post("/comment/::id", checkAuth, CommentController.createComment);
+
+// Reviews
+app.post("/reviews/create", ReviewsController.createReviews);
+app.get("/reviews/getAll", ReviewsController.getReviews);
+app.delete("/reviews/delete", ReviewsController.deleteReview)
 
 // Start function
 async function start() {

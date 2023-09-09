@@ -89,7 +89,8 @@
 
   li {
     padding: 1rem;
-    max-width: 500px;
+    min-width: 500px;
+    height: auto;
 
     background: var(--color-dark-second);
     border-radius: var(--border-radius-sm);

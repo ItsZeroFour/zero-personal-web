@@ -59,9 +59,11 @@ const Reviews = ({ isAuth }) => {
                     ))}
                   </div>
 
-                  <button onClick={deleteReview}>
-                    <FontAwesomeIcon icon={faTrash} />
-                  </button>
+                  {isAuth && data.email === "itsZeroFourX@gmail.com" && (
+                    <button onClick={deleteReview}>
+                      <FontAwesomeIcon icon={faTrash} />
+                    </button>
+                  )}
                 </div>
 
                 <p>{item.text}</p>

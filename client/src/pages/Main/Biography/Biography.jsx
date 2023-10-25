@@ -20,8 +20,8 @@ const Biography = () => {
           frontend (<span className="text-orange">HTML</span>,{" "}
           <span className="text-blue">CSS</span>,{" "}
           <span className="text-yellow">JS</span>), then I became{" "}
-          <span className="text-cyan">React</span> and more recently{" "}
-          <span className="text-green">Node JS</span>
+          <span className="text-cyan">React</span> and{" "}
+          <span className="text-green">NodeJS</span>
         </p>
       </div>
 
